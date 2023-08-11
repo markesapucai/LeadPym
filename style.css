@@ -132,3 +132,45 @@ main {
     gap: 24px;
     flex: 1 0 0;
 }
+footer {
+    border: 1px solid red;
+    display: flex;
+    padding: 80px 64px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+}
+#cont {
+    border: 1px solid green;
+    display: flex;
+    height: 248px;
+    align-items: flex-start;
+    gap: 128px; 
+}
+#newsLetter {
+    border: 1px solid green;
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0; 
+}
+#newsLetter img {
+    height: 100px;
+}
+#links {
+    border: 1px solid green;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex: 1 0 0;
+}
+.column {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+}
