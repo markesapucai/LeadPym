@@ -1,0 +1,10 @@
+{
+  "name": "Aurora Sapiens Landing page",
+  "version": "1.0.0",
+  "description": "A landing page",
+  "main": "index.js",
+  "repository": "https://github.com/markesapucai/website-aurora.git",
+  "author": "Mark Leite <marktobusiness113@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
