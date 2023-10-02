@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;800&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -10,9 +12,13 @@ body {
   justify-content: center;
   flex-direction: column;
   background-color: bisque;
+  position: relative;
 }
-
-.header {
+body img {
+  position: absolute;
+  z-index: -1;
+}
+body .header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,8 +27,9 @@ body {
   border: 1px solid red;
   gap: 10vh;
   padding: 24px;
+  color: white;
 }
-.header .timer {
+body .header .timer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,19 +37,30 @@ body {
   flex-direction: row;
   gap: 10px;
 }
-.header .timer .dit {
-  border: 1px solid rgb(0, 60, 255);
+body .header .timer div {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgb(0, 60, 255);
   flex-direction: row;
+  gap: 10px;
 }
-
-.main .cadastro {
-  border: 1px solid red;
+body .main .cadastro {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 24px;
   margin: 100px;
+  gap: 10px;
+  background-color: aliceblue;
+  border-radius: 6vh;
+}
+body .main .cadastro form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 10px;
 }/*# sourceMappingURL=style.css.map */

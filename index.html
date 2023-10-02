@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="./style.css">   
 </head>
 <body>
+    <img src="./assets/banner website.png" alt="">
     <div class="header">
         <h3>Lorem ipsum dolor </h3>
         <div class="timer">
             <div>
-                <h3>DIAS</h3>
                 <p class="pDay"></p>
+                <h3>DIAS</h3>
             </div>
             <div>
-                <h3>HORAS</h3>
                 <p class="pHour"></p>
+                <h3>HORAS</h3>
             </div>
             <div>
-                <h3>MIN</h3>
                 <p class="pMin"></p>
+                <h3>MIN</h3>
             </div>
-            <div> 
+            <div>
+                <p class="pSec"></p> 
                 <h3>SEGUNDOS</h3>
-                <p class="pSec"></p>
             </div>
         </div>
         <h3>Lorem ipsum dolor </h3>
@@ -33,11 +34,13 @@
         <div class="cadastro">
             <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum natus neque </h1>
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam </h3>
-            <input type="text" class="ipn name">
-            <input type="text" class="ipn email">
-            <button class="cadastrar">
-                fazer cadastro
-            </button>
+            <form>
+                <input type="number" id="cel" class="ipn celular" placeholder="Celular">
+                <input type="text" id="email" class="ipn email" placeholder="Email">
+                <button class="cadastrar" onclick="register()">
+                    fazer cadastro
+                </button>
+            </form>
         </div>
         <div class="avisos">
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat neque voluptatum nulla hic quam, 
@@ -45,6 +48,6 @@
         </div>
     </div>
 
-    <script src="./main.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

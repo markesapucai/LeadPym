@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;800&display=swap');
+
 @mixin flexCenter() {
     display: flex;
     align-items: center;
@@ -9,39 +11,55 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
     @include flexCenter;
     background-color: bisque;
-}
-.header {
-    @include flexCenter;
-    flex-direction: row;
-    border: 1px solid red;
-    gap: 10vh;
-    padding: 24px;
+    position: relative;
 
-    .timer {
+    img {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .header {
         @include flexCenter;
         flex-direction: row;
-        gap: 10px;
+        border: 1px solid red;
+        gap: 10vh;
+        padding: 24px;
+        color: white;
 
-        div {
-            border: 1px solid rgb(0, 60, 255);
-            display: flex;
+        .timer {
+            @include flexCenter;
             flex-direction: row;
+            gap: 10px;
+
+            div {
+                @include flexCenter;
+                border: 1px solid rgb(0, 60, 255);
+                flex-direction: row;
+                gap: 10px;
+            }
         }
     }
-}
 
-.main {
-    .cadastro{
-        border: 1px solid red;
-        @include flexCenter;
-        padding: 24px;
-        margin: 100px;
-        gap: 10px;
+    .main {
+        .cadastro{
+            @include flexCenter;
+            padding: 24px;
+            margin: 100px;
+            gap: 10px;
+            background-color: aliceblue;
+            border-radius: 6vh;
 
+            form {
+                @include flexCenter;
+                gap: 10px;
+            }
+
+        }
     }
 }
