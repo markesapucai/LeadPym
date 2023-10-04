@@ -29,9 +29,11 @@ function clock() {
             const pMin = document.querySelector('.pMin');
             const pSec = document.querySelector('.pSec');
             
-            if(hours < 10) {
-                hours = `0${hours}`
-            }
+            if(days < 10) days = `0${days}`
+            if(hours < 10) hours = `0${hours}`
+            if(min < 10) min = `0${min}`
+            if(sec < 10) sec = `0${sec}`
+            
 
             pDay.textContent = days;
             pHour.textContent = hours;
@@ -45,24 +47,30 @@ function clock() {
         }
     }
 }
-//parada da ormatação do input - REvisar - 
+//parada da formatação do input - REvisar - 
 function inputFormat() {
     let celInpValue = celInp.value;
-    let formattedValue = '';
 
-    if (celInpValue.length >= 2) {
-        formattedValue += `(${celInpValue.substring(0, 2)})`;
-    }
-    if (celInpValue.length > 2 && celInpValue.length <= 7) {
-        formattedValue += ` ${celInpValue.substring(2)}`;
-    } else if (celInpValue.length > 7) {
-        formattedValue += ` ${celInpValue.substring(2, 7)}-${celInpValue.substring(7)}`;
-    } else if (celInpValue.length > 2) {
-        formattedValue += ` ${celInpValue.substring(2)}`;
-    }
+    document.addEventListener('keydown', (e) => {
+        const el = e.target;
+        if (el.key == 'Backspace') {
+            apagar();
+        }
+    });
 
-    celInp.value = formattedValue; 
+    const apagar = () => {
+        return 5;
+    }
+        
+    
+    if (celInpValue.length === 11 && apagar != 5) {
+        let formattedValue = `(${celInpValue.substring(0, 2)}) ${celInpValue.substring(2, 7)}-${celInpValue.substring(7)}`;
+        
+        celInp.value = formattedValue;
+    } 
 }
+
+
 
 const celInp = document.querySelector('.celular');
 celInp.addEventListener('input', inputFormat);
