@@ -11,12 +11,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: bisque;
+  background-color: rgb(104, 104, 104);
   position: relative;
-}
-body img {
-  position: absolute;
-  z-index: -1;
 }
 body .header {
   display: flex;
@@ -46,16 +42,23 @@ body .header .timer div {
   flex-direction: row;
   gap: 10px;
 }
+body .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 body .main .cadastro {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 24px;
-  margin: 100px;
+  margin-top: 100px;
   gap: 10px;
   background-color: aliceblue;
   border-radius: 6vh;
+  width: 654px;
 }
 body .main .cadastro form {
   display: flex;
@@ -63,4 +66,33 @@ body .main .cadastro form {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  max-width: 420px;
+}
+body .main .cadastro form .ipn {
+  border-radius: 25px;
+  background: #ECEDEE;
+  width: 420px;
+  max-width: 420px;
+  min-height: 56px;
+  padding: 0px 25px;
+  border: none;
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.17) inset;
+}
+body .main .cadastro form .cadastrar {
+  width: 420px;
+  max-width: 420px;
+  min-height: 56px;
+  border-radius: 51px;
+  background: #99C342;
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.17) inset;
+  border: none;
+}
+body .main .avisos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #99C342;
+  width: 78%;
+  margin-top: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -48,29 +48,23 @@ function clock() {
     }
 }
 //parada da formatação do input - REvisar - 
-function inputFormat() {
-    let celInpValue = celInp.value;
+function inputFormat() { // Assuming 'celInp' is the ID of your input element.
 
-    document.addEventListener('keydown', (e) => {
-        const el = e.target;
-        if (el.key == 'Backspace') {
-            apagar();
+    celInp.addEventListener('input', () => {
+        let celInpValue = celInp.value.replace(/\D/g, ''); // Remove non-digit characters
+        if (celInpValue.length >= 2 && celInpValue.length <= 11) {
+            let formattedValue = `(${celInpValue.substring(0, 2)})`;
+
+            if (celInpValue.length > 2) {
+                formattedValue += ` ${celInpValue.substring(2, 7)}`;
+            }
+            if (celInpValue.length > 7) {
+                formattedValue += `-${celInpValue.substring(7, 11)}`;
+            }
+            celInp.value = formattedValue;
         }
     });
-
-    const apagar = () => {
-        return 5;
-    }
-        
-    
-    if (celInpValue.length === 11 && apagar != 5) {
-        let formattedValue = `(${celInpValue.substring(0, 2)}) ${celInpValue.substring(2, 7)}-${celInpValue.substring(7)}`;
-        
-        celInp.value = formattedValue;
-    } 
 }
-
-
 
 const celInp = document.querySelector('.celular');
 celInp.addEventListener('input', inputFormat);
